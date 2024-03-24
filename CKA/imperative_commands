@@ -1,0 +1,2 @@
+Question 5
+ There is a deployment alrady created. We need to scale up that at 80% of CPU usage. Set pod count minimum=3 and maximum=5 
