@@ -1,2 +1,7 @@
 Question 5
  There is a deployment alrady created. We need to scale up that at 80% of CPU usage. Set pod count minimum=3 and maximum=5 
+k autoscale deployment my-dep --min=2 --max=10 --cpu-percent=80
+
+ Question 6
+ Exposing deploymet as a service
+ kubectl expose deployment my-dep --name=  --port=80 --type=NodePort
