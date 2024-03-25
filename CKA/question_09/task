@@ -1,0 +1,1 @@
+k run busybox --image=busybox --command sleep 4800 --dry-run=client -o yaml > busybox.yaml
