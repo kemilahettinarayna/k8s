@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: multi-pod
+  name: multi-pod
+spec:
+  nodeName: controlplane
+  containers:
+  - image: nginx
+    name: multi-pod
+    volumeMounts:
+    - mountPath: /opt/multi-pod
+      name: multi-pod-volume
+      readOnly: true
+  - image: busybox
+    name: busybox-pod
+    command: ['sh', '-c', 'tail -f /var/busybox/log/*.log'] 
+    volumeMounts:
+    - mountPath: /opt/multi-pod
+      name: multi-pod-volume
+      readOnly: true 
+  volumes:
+  - name: multi-pod-volume
+    hostPath:
+      path: /root/k8s/CKA/question_11/host-directory/ 
+#      path: /opt
+      type: Directory 
