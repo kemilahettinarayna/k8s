@@ -14,7 +14,7 @@ spec:
     - namespaceSelector:
         matchLabels:
           project: project-b
-    - podSelector:
+      podSelector:
         matchLabels:
           tier: application
     ports:
