@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: frontend-app
-  namespace: project-c
+  namespace: project-b
   labels:
     tier: frontend
 spec:

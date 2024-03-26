@@ -3,6 +3,8 @@ kind: Pod
 metadata:
   name: mysql-pod
   namespace: project-a
+  labels:
+    tier: db  
 spec:
   containers:
   - name: mysql-container
