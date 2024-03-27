@@ -1,0 +1,5 @@
+k create namespace project-1
+kubectl create serviceaccount gitops -n project-1
+kubectl create role gitops-role --verb=create --resource=configmap,secret -n project-1
+k create rolebinding gitops-rolebinding --role=gitops-role --serviceaccount=project-1:gitops -n project-1
+k -n project-1 auth can-i create po --as system:serviceaccount:project-1:secrets
