@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: service-app
+  labels:
+    tier: service
+spec:
+  containers:
+  - name: service-app-container
+    image: nginx:latest
+    ports:
+    - containerPort: 80
