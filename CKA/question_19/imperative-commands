@@ -1,0 +1,2 @@
+k -n world expose deployment europe --port 80
+k -n world expose deployment asia --port 80
